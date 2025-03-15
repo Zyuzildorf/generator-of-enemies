@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -7,10 +8,7 @@ public class Enemy : MonoBehaviour
     
     private Vector3 _moveDirection;
     
-    public void Initialize(Spawner spawner)
-    {
-        _poolable.Initialize(spawner);
-    }
+    public event Action OnTriggerEntered;
     
     public void SetMoveDirection(Vector3 direction)
     {
@@ -30,6 +28,6 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        _poolable.ReturnObjectToPool();
+        OnTriggerEntered?.Invoke();
     }
 }

@@ -6,30 +6,30 @@ using UnityEngine;
 public abstract class Spawner : MonoBehaviour
 {
     [SerializeField] private Poolable _template;
-    [SerializeField] private List<SpawnPoint> _spawnPoints;
+    [SerializeField] private List<Transform> _spawnPoints;
     [SerializeField] private float _repeatRate = 2f;
     [SerializeField] private int _poolCapacity = 10;
     [SerializeField] private int _poolMaxSize = 15;
 
     private ObjectPool<Poolable> _pool;
-
-    public abstract void InitilizePoolable(Poolable poolable);
     
-    public void ReleasePoolable(Poolable poolable)
+    private void ReleasePoolable(Poolable poolable)
     {
         _pool.Release(poolable);
+        poolable.OnPreferRelease -= ReleasePoolable;
     }
     
     public virtual void ActionOnGet(Poolable poolable)
     {
         poolable.gameObject.transform.position = ChooseRandomSpawnPoint();
+        poolable.OnPreferRelease += ReleasePoolable;
         poolable.gameObject.SetActive(true);
     }
     
     private void Awake()
     {
         _pool = new ObjectPool<Poolable>(
-            createFunc: () => CreatePoolable(),
+            createFunc: () => Instantiate(_template),
             actionOnGet: (obj) => ActionOnGet(obj),
             actionOnRelease: (obj) => obj.gameObject.SetActive(false),
             actionOnDestroy: (obj) => Destroy(obj),
@@ -43,14 +43,6 @@ public abstract class Spawner : MonoBehaviour
         InvokeRepeating(nameof(GetObject), 0.0f, _repeatRate);
     }
     
-    private Poolable CreatePoolable()
-    {
-        Poolable poolable = Instantiate(_template);
-        InitilizePoolable(poolable);
-
-        return poolable;
-    }
-    
     private void GetObject()
     {
         _pool.Get();
@@ -60,7 +52,7 @@ public abstract class Spawner : MonoBehaviour
     {
         Vector3 spawnPointPosition;
 
-        spawnPointPosition = _spawnPoints[Random.Range(0, _spawnPoints.Count)].transform.position;
+        spawnPointPosition = _spawnPoints[Random.Range(0, _spawnPoints.Count)].position;
 
         return spawnPointPosition;
     }

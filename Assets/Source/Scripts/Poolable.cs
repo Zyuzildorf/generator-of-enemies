@@ -1,16 +1,24 @@
+using System;
 using UnityEngine;
 
 public class Poolable : MonoBehaviour
 {
-    private Spawner _spawner;
+    [SerializeField] private Enemy _enemy;
     
-    public void ReturnObjectToPool()
+    public event Action<Poolable> OnPreferRelease;
+
+    private void OnEnable()
     {
-        _spawner.ReleasePoolable(this);
+        _enemy.OnTriggerEntered += InvokeEvent;
     }
-    
-    public void Initialize(Spawner spawner)
+
+    private void OnDisable()
     {
-        _spawner = spawner;
+        _enemy.OnTriggerEntered -= InvokeEvent;
+    }
+
+    private void InvokeEvent()
+    {
+        OnPreferRelease?.Invoke(this);
     }
 }

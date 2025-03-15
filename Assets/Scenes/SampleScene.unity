@@ -122,37 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &33245151
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 33245152}
-  m_Layer: 0
-  m_Name: Poolable
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &33245152
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 33245151}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2071377, y: -3.496643, z: -1.1280409}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &197297132
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,8 +491,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 596530822}
-  - component: {fileID: 596530824}
-  - component: {fileID: 596530823}
   m_Layer: 0
   m_Name: SpawnPoint 4
   m_TagString: Untagged
@@ -546,46 +513,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1211736430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &596530823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 596530821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70798ce94dc11cd4fb5cecef5313ef63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spawnPoint: {fileID: 596530824}
---- !u!54 &596530824
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 596530821}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &664030864
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,8 +522,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 664030865}
-  - component: {fileID: 664030867}
-  - component: {fileID: 664030866}
   m_Layer: 0
   m_Name: SpawnPoint 1
   m_TagString: Untagged
@@ -619,46 +544,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1211736430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &664030866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 664030864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70798ce94dc11cd4fb5cecef5313ef63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spawnPoint: {fileID: 664030867}
---- !u!54 &664030867
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 664030864}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &694178649
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,8 +553,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 694178650}
-  - component: {fileID: 694178652}
-  - component: {fileID: 694178651}
   m_Layer: 0
   m_Name: SpawnPoint 3
   m_TagString: Untagged
@@ -692,46 +575,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1211736430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &694178651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 694178649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70798ce94dc11cd4fb5cecef5313ef63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spawnPoint: {fileID: 694178652}
---- !u!54 &694178652
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 694178649}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &727448404
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,8 +689,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 743943634}
-  - component: {fileID: 743943636}
-  - component: {fileID: 743943635}
   m_Layer: 0
   m_Name: SpawnPoint 2
   m_TagString: Untagged
@@ -870,46 +711,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1211736430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &743943635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 743943633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70798ce94dc11cd4fb5cecef5313ef63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spawnPoint: {fileID: 743943636}
---- !u!54 &743943636
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 743943633}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1214,8 +1015,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1467713126}
-  - component: {fileID: 1467713128}
-  - component: {fileID: 1467713127}
   m_Layer: 0
   m_Name: SpawnPoint 5
   m_TagString: Untagged
@@ -1238,46 +1037,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1211736430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1467713127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1467713125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70798ce94dc11cd4fb5cecef5313ef63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spawnPoint: {fileID: 1467713128}
---- !u!54 &1467713128
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1467713125}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1782140944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,11 +1104,11 @@ MonoBehaviour:
   _template: {fileID: -2116221499282296128, guid: 8ee08d04ad5df46fbb2e97260b63420b,
     type: 3}
   _spawnPoints:
-  - {fileID: 664030866}
-  - {fileID: 743943635}
-  - {fileID: 694178651}
-  - {fileID: 596530823}
-  - {fileID: 1467713127}
+  - {fileID: 664030865}
+  - {fileID: 743943634}
+  - {fileID: 694178650}
+  - {fileID: 596530822}
+  - {fileID: 1467713126}
   _repeatRate: 2
   _poolCapacity: 10
   _poolMaxSize: 15
@@ -1485,4 +1244,3 @@ SceneRoots:
   - {fileID: 1211736430}
   - {fileID: 2144249164}
   - {fileID: 1782140945}
-  - {fileID: 33245152}
